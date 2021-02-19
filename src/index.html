@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <title>Test</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#" class="header__logo">Logo</a>
+        <!-- header-navigation -->
+        <nav class="header-navigation">
+          <div class="header-navigation__link-wrapper">
+            <a href="#" class="header-navigation__link">Free test</a>
+            <a href="#" class="header-navigation__link active">Catalog</a>
+            <a href="#" class="header-navigation__link">Help</a>
+          </div>
+          <div class="header-navigation__person">
+            <div class="header-navigation__person-name">Michael Browk</div>
+            <div class="header-navigation__person-avatar"><img src="assets/img/icons/lion.svg" alt="Avatar"></div>
+          </div>
+        </nav><!-- header-navigation -->
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container content__container">
+      <!-- catalog -->
+      <div class="catalog">
+        <div class="catalog__wrapper">
+          <h1 class="catalog__title">Course catalog</h1>
+          <div class="catalog__description">Each course contains video lectures, tasks, and text materials. All courses
+            viewed by you are displayed in your personal account</div>
+        </div>
+      </div><!-- catalog -->
+
+      <!-- form-box -->
+      <div class="form-box">
+        <form class="form">
+          <div class="form__group form__group--search">
+            <img class="form__search-icon" src="assets/img/icons/search.svg" alt="Search">
+            <input type="text" class="form__search" placeholder=" ">
+            <div class="form__search-floating-label">Search</div>
+          </div>
+          <div class="form__group- form__group--select">
+            <div class="select">
+              <!-- <span class="selectLabel" id="jobLabel"> Main job role</span> -->
+              <div class="selectWrapper">
+                <select class="selectNative js-selectNative" aria-labelledby="jobLabel">
+                  <option value="sel" disabled="" selected=""></option>
+                  <option value="rus">UI/UX Designer</option>
+                  <option value="usa">Frontend Engineer</option>
+                  <option value="ger">Backend Engineer</option>
+                </select>
+          
+                <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
+                <div class="selectCustom js-selectCustom" aria-hidden="true">
+                  <div class="selectCustom-trigger"></div>
+                  <div class="selectCustom-options">
+                    <div class="selectCustom-option" data-value="rus">Russia</div>
+                    <div class="selectCustom-option" data-value="usa">USA</div>
+                    <div class="selectCustom-option" data-value="ger">Germany</div>
+                  </div>
+                  <div class="form__floating-label">Your country</div>
+                  <div class="selectCustom-close"><img src="assets/img/icons/close.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div><!-- form-box -->
+
+      <div class="courses">     
+      <!-- course -->
+      <div class="course">
+        <div class="course__top">
+          <div class="course__top-mask"></div>
+          <img class="course__img-bg" src="assets/img/bg1.png" alt="">
+          <div class="course__progress">
+            <div class="course__progress-info">Progress&nbsp;<span>12%</span></div>
+            <div class="course__progress-bar"></div>
+          </div>
+          <div class="course__person">
+            <div class="course__image"><img src="assets/img/ava1.png" alt=""></div>
+            <div class="course__name">Alexa</div>
+          </div>
+        </div>
+        <div class="course__bottom">
+          <div class="course__title">Take exam in Mathematics at 100 points</div>
+          <div class="course__wrapper">
+            <div class="course__item">
+              <img src="assets/img/icons/student.svg" alt="">12 lessons</div>
+            <div class="course__item">
+              <img src="assets/img/icons/pen.svg" alt="">12 tasks</div>
+            <div class="course__item">
+              <img src="assets/img/icons/video.svg" alt="">30 minutes</div>
+          </div>
+          <div class="course__box-btn">
+            <button type="button" class="course__btn course__btn--mod secondary btn">Continue</button>
+            <button type="button" class="course__btn btn flat">More</button></div>
+        </div>
+      </div><!-- course -->
+
+      <!-- course -->
+      <div class="course">
+        <div class="course__top">
+          <div class="course__top-mask"></div>
+          <img class="course__img-bg" src="assets/img/bg3.png" alt="">
+          <div class="course__progress">
+            <div class="course__progress-info">Progress&nbsp;<span>12%</span></div>
+            <div class="course__progress-bar"></div>
+          </div>
+          <div class="course__person">
+            <div class="course__image"><img src="assets/img/ava2.png" alt=""></div>
+            <div class="course__name">Kathryn Nguyen</div>
+          </div>
+        </div>
+        <div class="course__bottom">
+          <div class="course__title">How buy new clothes without money in USA</div>
+          <div class="course__wrapper">
+            <div class="course__item">
+              <img src="assets/img/icons/student.svg" alt="">12 lessons</div>
+            <div class="course__item">
+              <img src="assets/img/icons/pen.svg" alt="">12 tasks</div>
+            <div class="course__item">
+              <img src="assets/img/icons/video.svg" alt="">30 minutes</div>
+          </div>
+          <div class="course__box-btn">
+            <button type="button" class="course__btn course__btn--mod secondary btn">Continue</button>
+            <button type="button" class="course__btn btn flat">More</button></div>
+        </div>
+      </div><!-- course -->
+
+      <!-- course -->
+      <div class="course">
+        <div class="course__top">
+          <div class="course__top-mask"></div>
+          <img class="course__img-bg" src="assets/img/bg2.png" alt="">
+          <div class="course__progress">
+            <div class="course__progress-info">Progress&nbsp;<span>12%</span></div>
+            <div class="course__progress-bar"></div>
+          </div>
+          <div class="course__person">
+            <div class="course__image"><img src="assets/img/ava3.png" alt=""></div>
+            <div class="course__name">Diane Miles</div>
+          </div>
+        </div>
+        <div class="course__bottom">
+          <div class="course__title">Why people hate me?</div>
+          <div class="course__wrapper">
+            <div class="course__item">
+              <img src="assets/img/icons/student.svg" alt="">12 lessons</div>
+            <div class="course__item">
+              <img src="assets/img/icons/pen.svg" alt="">12 tasks</div>
+            <div class="course__item">
+              <img src="assets/img/icons/video.svg" alt="">30 minutes</div>
+          </div>
+          <div class="course__box-btn">
+            <button type="button" class="course__btn course__btn--mod btn secondary">Continue</button>
+            <button type="button" class="course__btn btn flat">More</button></div>
+        </div>
+      </div><!-- course -->
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>

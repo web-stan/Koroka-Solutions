@@ -1,0 +1,210 @@
+// Both native and custom selects must have the same width/height.
+.selectNative,
+.selectCustom {
+  position: relative;
+  width: 100%;
+  height: 56px;
+}
+
+// Make sure the custom select does not mess with the layout
+.selectCustom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.optionChecked {
+  .selectCustom-close {
+    display: block;
+  }
+
+  .form__floating-label {
+    font-size: 13px;
+    line-height: 20px;
+    top: 15px;
+  }
+}
+
+.selectCustom.isActive {
+  .selectCustom-trigger {
+    &:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.form__floating-label {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  color: rgba(17, 17, 17, 0.48);
+  transform: translateY(-50%);
+  z-index: 3;
+  transition: all .2s ease-in-out;
+  pointer-events: none;
+}
+
+// This media query detects devices where the primary
+// input mechanism can hover over elements. (e.g. computers with a mouse)
+
+// @media (hover: hover) {
+// Since we are using a mouse, it's safe to show the custom select.
+.selectCustom {
+  display: block;
+}
+
+// In a computer using keyboard? Then let's hide back the custom select
+// while the native one is focused:
+.selectNative:focus+.selectCustom {
+  display: none;
+}
+
+// }
+
+/* Add the focus states too, They matter, always! */
+.selectNative:focus,
+.selectCustom.isActive .selectCustom-trigger {
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24);
+}
+
+.selectNative:focus,
+.selectCustom.isActive .form__floating-label {
+  font-size: 13px;
+  line-height: 20px;
+  top: 15px;
+}
+
+//
+// Rest of the styles to create the custom select.
+// Just make sure the native and the custom have a similar "box" (the trigger).
+//
+
+.select {
+  position: relative;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.selectWrapper {
+  position: relative;
+
+
+}
+
+.selectNative,
+.selectCustom-trigger {
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+
+.selectCustom-trigger {
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24);
+  }
+}
+
+.selectNative {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 0.8rem;
+  padding: 0rem 0.8rem;
+}
+
+.selectCustom-trigger {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #111111;
+  background-color: #fff;
+  padding: 25px 16px 5px;
+  cursor: pointer;
+}
+
+.selectCustom-trigger::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 10px;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0);
+  background: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.97055 9.50614C7.77408 9.50728 7.57931 9.46944 7.39742 9.39479C7.21553 9.32015 7.0501 9.21016 6.9106 9.07114L0.939046 3.07114C0.799851 2.93128 0.689436 2.76524 0.614105 2.58251C0.538773 2.39978 0.5 2.20393 0.5 2.00614C0.5 1.80835 0.538773 1.6125 0.614105 1.42976C0.689436 1.24703 0.799851 1.08099 0.939046 0.941137C1.07824 0.801279 1.24349 0.690337 1.42536 0.614647C1.60722 0.538956 1.80215 0.5 1.999 0.5C2.19585 0.5 2.39077 0.538956 2.57264 0.614647C2.75451 0.690337 2.91975 0.801279 3.05895 0.941137L7.97055 5.90614L12.8971 1.13614C13.0344 0.982702 13.2018 0.859389 13.3887 0.77391C13.5756 0.688431 13.7781 0.642625 13.9835 0.639356C14.1888 0.636087 14.3926 0.675425 14.5822 0.754911C14.7717 0.834398 14.9429 0.952323 15.085 1.10131C15.2271 1.2503 15.337 1.42714 15.408 1.62078C15.479 1.81442 15.5094 2.0207 15.4975 2.2267C15.4855 2.4327 15.4313 2.63401 15.3384 2.81802C15.2454 3.00204 15.1157 3.1648 14.9573 3.29614L8.98571 9.08614C8.7127 9.35061 8.34975 9.50077 7.97055 9.50614Z' fill='%23111111' fill-opacity='0.48'/%3E%3C/svg%3E%0A") no-repeat;
+  cursor: default;
+  transition: all .2s ease-in-out;
+}
+
+// .selectCustom-trigger:hover {
+//   border-color: #8c00ff;
+// }
+
+.selectCustom-close {
+  display: none;
+  position: absolute;
+  right: 46px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.selectCustom-options {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 14px 24px rgba(51, 51, 51, 0.12);
+  border-radius: 4px;
+  z-index: 1;
+  display: none;
+}
+
+.selectCustom.isActive .selectCustom-options {
+  display: block;
+}
+
+.selectCustom-option {
+  position: relative;
+  padding: 0.8rem;
+  padding-left: 16px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.selectCustom-option.isHover,
+.selectCustom-option:hover {
+  background: #F1F1F1;
+}
+
+// .selectCustom-option:not(:last-of-type)::after {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     // border-bottom: 1px solid #d3d3d3;
+// }
+
+.selectCustom-option.isActive::before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  width: 16px;
+  height: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.43762 6.64248C2.1635 6.41757 1.80629 6.29554 1.43766 6.30087C1.06903 6.3062 0.716246 6.43849 0.450066 6.67121C0.183887 6.90393 0.0240054 7.21987 0.00249123 7.55564C-0.0190229 7.89142 0.0994217 8.22219 0.334067 8.48162L3.57705 11.5868C3.71283 11.7168 3.87598 11.8204 4.05672 11.8913C4.23745 11.9623 4.43205 11.9993 4.62883 12C4.82456 12.001 5.01853 11.9662 5.19921 11.8975C5.37989 11.8288 5.54359 11.7277 5.68061 11.6002L15.5849 2.27119C15.7191 2.14518 15.8249 1.99628 15.8961 1.83298C15.9673 1.66968 16.0026 1.49518 15.9999 1.31945C15.9971 1.14372 15.9565 0.970196 15.8803 0.80879C15.8041 0.647384 15.6938 0.501255 15.5556 0.378745C15.4175 0.256235 15.2543 0.159744 15.0753 0.094782C14.8963 0.0298196 14.705 -0.00234234 14.5124 0.000132731C14.3198 0.0026078 14.1296 0.0396712 13.9527 0.109207C13.7758 0.178743 13.6156 0.279389 13.4813 0.405399L4.64344 8.74816L2.43762 6.64248Z' fill='%23111111'/%3E%3C/svg%3E%0A") no-repeat;
+}

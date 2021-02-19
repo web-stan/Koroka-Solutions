@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <title>Test</title>
+</head>
+
+<body>
+  <div class="profile">
+    <div class="profile__content">
+      <h1 class="profile__title">Profile</h1>
+      <form method="POST" class="profile-form">
+        <div class="profile-form__tabs-block">
+          <div class="profile-form__tabs">
+            <div class="profile-form__tab active">Registration</div>
+            <div class="profile-form__tab">Sign in</div>
+          </div>
+          <div class="profile-form__social">
+            <div class="profile-form__social-text">You can sign in with social</div>
+            <div class="profile-form__social-links">
+              <a href="#" class="profile-form__social-link"><img src="assets/img/icons/vk.svg" alt=""></a>
+              <a href="#" class="profile-form__social-link"><img src="assets/img/icons/f.svg" alt=""></a>
+              <a href="#" class="profile-form__social-link"><img src="assets/img/icons/google.svg" alt=""></a>
+            </div>
+          </div>
+          <div class="profile-form__contents">
+            <div class="profile-form__content">
+              <div class="profile-form__group ">
+                <input class="profile-form__input" type="text" placeholder=" " name="Name" id="">
+                <div class="profile-form__floating-label">Your name</div>
+                <div class="profile-form__error">Enter right name</div>
+              </div>
+              <div class="profile-form__group">
+                <input class="profile-form__input" type="email" placeholder=" " name="Email" id="">
+                <div class="profile-form__floating-label">E-mail</div>
+                <div class="profile-form__error">Enter right email</div>
+              </div>
+              <div class="profile-form__group">
+                <input class="profile-form__input" type="tel" placeholder=" " name="Phone" id="">
+                <div class="profile-form__floating-label">Phone</div>
+                <div class="profile-form__error">Enter right phone</div>
+              </div>
+              <div class="profile-form__policy">
+                <input class="profile-form__checkbox" id="checked1" type="checkbox" hidden="">
+                <label for="checked1" class="profile-form__policy-label">
+                  I accept the terms of the offer of <a target="_blank" href="#">the privacy policy</a>
+                </label>
+                <div class="profile-form__error">Not checked</div>
+              </div>
+            </div>
+            <!-- <div class="profile-form__content"></div> -->
+          </div>
+          <div class="profile-form__btn-box">
+            <button formnovalidate type="submit" class="profile-form__btn btn primary">Registration</button>
+            <button type="button" class="profile-form__btn btn flat">Sign in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

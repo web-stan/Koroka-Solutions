@@ -1,0 +1,35 @@
+.content {
+
+  &__container {
+    padding: 40px 51px 77px;
+
+    @media(max-width: 575.98px) {
+      padding: 15px;
+    }
+  } 
+}
+
+.catalog {
+  margin-bottom: 32px;
+  &__wrapper {
+    max-width: 720px;
+  }
+
+  &__description {
+    color: $dark-color;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: $secondaryFont;
+    font-size: 40px;
+    font-weight: $boldFontWeight;
+    color: $dark-color;
+    line-height: 48px;
+
+    @media(max-width: 575.98px) {
+      font-size: 30px;
+      line-height: 24px;
+    }
+  }
+}
